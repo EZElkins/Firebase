@@ -9,6 +9,9 @@ target 'Firebase' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
 
+  use_frameworks!
+  pod 'TwitterKit'
+
   target 'FirebaseUITests' do
     inherit! :search_paths
     # Pods for testing
