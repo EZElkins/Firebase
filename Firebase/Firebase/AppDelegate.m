@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <TwitterKit/TWTRKit.h>
 
 @import UIKit;
 @import Firebase;
@@ -20,9 +21,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [[Twitter sharedInstance] startWithConsumerKey:@"DP9zTLKvmPgvNRFKrGkuRjeTP" consumerSecret:@"7hRdhXHPIliBdghlVrFYiRnqswaNf4RGlo9COKxlxkSoRKS95R"];
     [FIRApp configure];
     
     return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [[Twitter sharedInstance] application:app openURL:url options:options];
 }
 
 
