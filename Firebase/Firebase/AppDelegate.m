@@ -21,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [[Twitter sharedInstance] startWithConsumerKey:@"DP9zTLKvmPgvNRFKrGkuRjeTP" consumerSecret:@"7hRdhXHPIliBdghlVrFYiRnqswaNf4RGlo9COKxlxkSoRKS95R"];
+    [[Twitter sharedInstance] startWithConsumerKey:@"DP9zTLKvmPgvNRFKrGkuRjeTP" consumerSecret:@""];
     [FIRApp configure];
     
     return YES;
